@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Praktik Tabel</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 500px;
+        }
+        tr th {
+            border: 2px solid black;
+            background-color: bisque;
+            
+        }
+        tr td{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Membuat Tabel</h1>
+    <table>
+        <tr>
+            <th width="5%">No.</th>
+            <th>Nama</th>
+            <th>Umur</th>
+        </tr>
+        <tr>
+            <td width="5%">1</td>
+            <td>Bayu</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td width="5%">2</td>
+            <td>Doni</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td width="5%">3</td>
+            <td>Dita</td>
+            <td>17</td>
+        </tr>
+    </table>
+    <h1>Menggabungkan Kolom</h1>
+    <table>
+        <tr>
+            <th width="5%">No.</th>
+            <th>Nama</th>
+            <th colspan="2">Telepon</th>
+            
+        </tr>
+        <tr>
+            <td width="5%">1</td>
+            <td>Bayu</td>
+            <td>0892129...</td>
+            <td>0892232...</td>
+        </tr>
+        <tr>
+            <td width="5%">2</td>
+            <td>Doni</td>
+            <td>0812339...</td>
+            <td>0893222...</td>
+        </tr>
+        <tr>
+            <td width="5%">3</td>
+            <td>Dita</td>
+            <td>0832129...</td>
+            <td>0893333...</td>
+        </tr>
+    </table>
+    <h1>Menggabungkan baris</h1>
+    <table>
+        <tr>
+          <th>Nama:</th>
+          <td>Dion</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Telephone:</th>
+          <td>0821374192</td>
+        </tr>
+        <tr>
+          <td>0892312468</td>
+        </tr>
+      </table>
+</body>
+</html>
