@@ -108,6 +108,11 @@ section{
     border: 0;
     letter-spacing: 0.1px;
 }
+.jadwal table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
 .jadwal table tr th{
     border: 1.5px solid #e2e2e0;
     color: white;
