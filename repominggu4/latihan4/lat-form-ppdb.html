@@ -3,9 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Form PPDB</title>
 </head>
 <body>
-    
+    <main>
+        <div class="judul">
+            <h1>FORM PPDB JALUR ZONASI TAHUN 2020</h1>
+        </div>
+        <div class="container-form">   
+            <form action="" method="POST">
+                <!-- Form Box 1 -->
+                <h2 style="padding-top: 70px;">Info Pendaftaran</h2>
+                <div class="form-box clearfix">
+                    <div class="input-box">
+                        <label>NISN</label>
+                        <input type="text" maxlength="10" name="nisn"/>
+                    </div>
+                    <div class="input-box">
+                        <label>Asal Sekolah</label>
+                        <input type="text" name="asal_sekolah"/>
+                    </div>
+                    <div class="input-box">
+                        <label>Tahun Lulus</label>
+                        <input type="number" min="2015" max="2020" placeholder="(lampirkan foto/scan ijazah)"/>
+                    </div>
+                    <div class="input-file">
+                        <label>Upload Foto/Scan Ijazah</label>
+                        <input type="file" name="ijazah" required/>
+                    </div>
+                </div>
+                <!-- Form Box 2 -->
+                <h2>Data Calon Peserta</h2>
+                <div class="form-box clearfix">
+                    <div class="input-box">
+                        <label>Nama Lengkap</label>
+                        <input type="text"  name="nama"/>
+                    </div>
+                    <div class="input-box">
+                        <label>NIK</label>
+                        <input type="text" maxlength="16" name="nik"/>
+                    </div>
+                    <div class="input-box">
+                        <label>Tempat Lahir </label>
+                        <input type="text" name="tempat_lahir"/>
+                    </div>
+                    <div class="input-box">
+                        <label>Tanggal Lahir </label>
+                        <input type="date" name="tanggal_lahir"/>
+                    </div>
+                    <div class="input-box">
+                        <label>Umur</label>
+                        <input type="number" name="umur" min="7" max="20" class="rm" />
+                    </div>
+                    <div class="input-box" style="margin-bottom: 0;">
+                        <p>(lampirkan foto/scan Akte Kelahiran yang telah dilegalisir)</p>
+                    </div>
+                    <div class="input-file" style="margin-bottom: 30px;">
+                        <label>Upload Foto/Scan Akte Kelahiran</label>
+                        <input type="file" name="akte" required/>
+                    </div>
+                    <div class="jk" style="margin-bottom: 20px;">
+                        <label>Jenis Kelamin </label>
+                        <div class="radio">
+                            <input type="radio" name="jenis_kelamin" placeholder="laki-laki" /><label class="label2">Laki-laki</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="jenis_kelamin" placeholder="perempuan" /><label class="label2">Perempuan</label>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <label>Umur</label>
+                        <input type="number" name="umur" min="7" max="20" class="rm" />
+                    </div>
+                    <div class="text-area">
+                        <label>Alamat</label>
+                        <textarea name="alamat"></textarea>
+                    </div>
+                    <div class="input-box">
+                        <label class="indent">Desa / Kel. </label>
+                        <input type="text" name="desa"/>
+                    </div>
+                    <div class="input-box">
+                        <label class="indent">Kecamatan</label>
+                        <input type="text" name="kecamatan"/>
+                    </div>
+                    <div class="input-box">
+                        <label class="indent">Kabupaten</label>
+                        <input type="text" name="kabupaten"/>
+                    </div>
+                    <div class="input-box">
+                        <label class="indent">Provinsi</label>
+                        <input type="text" name="provinsi"/>
+                    </div>
+                    <div class="input-box end">
+                        <label>Email Aktif</label>
+                        <input type="email" name="email"/>
+                    </div>
+                </div>
+                <!-- Form Box 3 -->
+                <h2>Data Orang Tua</h2>
+                <div class="form-box clearfix">
+                    <div class="input-box r2">
+                        <label>Nomor Kartu Keluarga</label>
+                        <input type="text" maxlength="16" name="nokk"/>
+                    </div>
+                    <div class="input-box r2">
+                        <label>Nama Ayah Kandung</label>
+                        <input type="text" name="nama_ayah"/>
+                    </div>
+                    <div class="input-box">
+                        <label>Agama</label>
+                        <select name="agama_ayah">
+                            <option value="budha">Budha</option>
+                            <option value="hindu">Hindu</option>
+                            <option value="islam">Islam</option>
+                            <option value="katholik">Katholik</option>
+                            <option value="kristen">Kristen</option>
+                            <option value="konghucu">Konghucu</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label>Pekerjaan</label>
+                        <input type="text" name="pekerjaan_ayah"/>
+                    </div>
+                    <div class="input-box r2">
+                        <label>Nama Ibu Kandung</label>
+                        <input type="text" name="nama_ibu"/>
+                    </div>
+                    <div class="input-box">
+                        <label>Agama</label>
+                        <select name="agama_ibu">
+                            <option value="budha">Budha</option>
+                            <option value="hindu">Hindu</option>
+                            <option value="islam">Islam</option>
+                            <option value="katholik">Katholik</option>
+                            <option value="kristen">Kristen</option>
+                            <option value="konghucu">Konghucu</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label>Pekerjaan</label>
+                        <input type="text" name="pekerjaan_ibu"/>
+                    </div>
+                    <div class="text-area">
+                        <label>Alamat Orang Tua</label>
+                        <textarea name="alamat_ortu"></textarea>
+                    </div>
+                    <div class="input-box">
+                        <label class="indent">Desa / Kel. </label>
+                        <input type="text" name="desa_ortu"/>
+                    </div>
+                    <div class="input-box">
+                        <label class="indent">Kecamatan</label>
+                        <input type="text" name="kecamatan_ortu"/>
+                    </div>
+                    <div class="input-box">
+                        <label class="indent">Kabupaten</label>
+                        <input type="text" name="kabupaten_ortu"/>
+                    </div>
+                    <div class="input-box">
+                        <label class="indent">Provinsi</label>
+                        <input type="text" name="provinsi_ortu"/>
+                    </div>
+                    <div class="input-box" style="margin-bottom: 0;">
+                        <p>(lampirkan KK)</p>
+                    </div>
+                    <div class="input-file">
+                        <label>Upload Foto/Scan KK</label>
+                        <input type="file" name="kk" required/>
+                    </div>
+                </div>
+                <div class="warp-button">
+                    <div class="button">
+                        <input type="submit" name="submit" value="SUBMIT DATA" class="blue"/>
+                        <input type="reset" name="submit" value="RESET DATA" class="red"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
