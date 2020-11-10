@@ -4,38 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <title>Personal Website</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Me</title>
     
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="cv-name.pdf">Download CV</a> |
-        <a href="kontak.html">Contact</a> |
-        <a href="tentang.html">About me</a>
+        <div class="wrapper-nav clearfix">
+            <div class="logo">
+                <a href="index.html"><img src="image/logo.png" alt="Logo"></a>
+            </div>
+            <div class="nav-menu">
+                <a href="cv-name.pdf" class="download" target="_blank">Download CV</a>
+                <a href="tentang.html">About me</a>
+                <a href="kontak.html">Contact</a>
+                <a href="index.html">Home</a>
+            </div>
+        </div>
     </nav>
 
-    <hr />
-
-    <div>
-        <h1>Kontak Saya </h1>
+    <header class="header-contact">
+        <div class="box">
+            <p>CONTACT ME</p>
+        </div>      
+    </header>
+    <div class="contact">
+        <h1>Contact me on E-mail</h1>
         <form>
             <label for="email">Email</label><br />
-            <input type="email" name="email" placeholder="alamat email"/>
-            <br />
+            <input type="email" name="email" placeholder="Alamat Email"/>
             <label for="message">Pesan</label><br />
-            <textarea name="message" placeholder="Tulis pesan anda..." rows="4" cols="80"></textarea>
-            <br />
-            <br />
+            <textarea name="message" placeholder="Tulis Pesan Anda..."></textarea>
             <input type="submit" value="Kirim" />
         </form>
     </div>
-    
-    <hr>
-
-    <footer style="text-align: center;">
-        <p>Copyright &copy; 2020 Louis Bayu K R.</p>
+    <footer>
+        <div class="wrap-footer clearfix">
+            <div class="logo-foot">
+                <a href="index.html"><img src="image/logo2.png" alt="Logo"></a>
+                <div class="visit">
+                    <a href="https://github.com/LouisBayu/webdas" target="_blank"><img src="image/github.png" alt="Github"></a>
+                    <a href="https://www.instagram.com/?hl=id" target="_blank"><img src="image/ig.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/dikki.saputr" target="_blank"><img src="image/fb.png" alt="Facebook" style="margin-right: 0;"></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="footer-menu">
+                    <a href="index.html">Home</a>
+                    <a href="kontak.html">Contact</a>
+                    <a href="tentang.html">About me</a>
+                    <a href="cv-name.pdf" class="download" target="_blank">Download CV</a>
+                </div>
+                <p>Terimakasih telah mengunjungi web sederhanaku.</p>
+                <hr>
+                <p style="font-size: 12px; margin-top: 10px;">Copyright &copy; 2020 Louis Bayu K R.</p>
+            </div>
+        </div>
+        
     </footer>
 </body>
 </html>
