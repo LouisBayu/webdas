@@ -1,8 +1,11 @@
 @font-face{
     font-family: "Popins";
-    src: url(font/Poppins-Medium.otf) format('opentype');
+    src: url(../font/Poppins-Medium.otf) format('opentype');
 }
-
+@font-face{
+    font-family: "Open Sans";
+    src: url(../font/OpenSans-Regular.ttf) format('truetype');
+}
 *{
     margin:0;
 
@@ -326,7 +329,7 @@ main{
     position: relative;
     height: 300px;
     background-color: #e9ebf9;
-    background-image: url(image/joinmitra.png) ;
+    background-image: url(../image/joinmitra.png) ;
     background-size: 60vh ;
     background-repeat: no-repeat;
     background-position-y: bottom;
@@ -431,6 +434,151 @@ footer p{
     text-decoration: none;
     
 }
+.overlay{
+    position: fixed;
+    visibility: hidden;
+    background-color: rgb(0,0,0,0.7);
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+
+.login-popup{
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1000;
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    border-radius: 10px;
+    padding:50px 0;
+    text-align: center;
+}
+.close{
+    color:#3d6cbb;
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-sizing: border-box;
+    position: absolute;
+    top:10px;
+    right:10px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+.close:hover{
+    color:red;
+}
+.wrap-login{
+    margin: 0 auto;
+    width: 80%;
+}
+.wrap-login h1{
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 30px;
+    color: #3d6cbb;
+}
+.wrap-login img{
+    width: 250px;
+}
+.form-input{
+    padding-top: 30px;
+}
+.input-box{
+    width: 100%;
+    border-bottom: 1.8px solid #cccccc;
+    transition: 300ms;
+    margin-bottom: 15px;
+}
+.input-box input[type=email], .input-box input[type=password]{
+    width: 90%;
+    border:0;
+    height: 30px;
+}
+.input-box input[type=email]:hover, .input-box input[type=password]:hover, .input-box input[type=email]:focus, .input-box input[type=password]:focus{
+    outline: none;
+}
+.input-box input::placeholder{
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.input-box:hover{
+    border-bottom: 1.8px solid #3d6cbb;
+}
+.input-box img{
+    width:13px;
+    display: inline-block;
+}
+.login-button{
+    padding:10px;
+    border-radius: 5px;
+    width:100%;
+    background-color: #3d6cbb;
+    color: white;
+    border:0;
+    transition: 0.3s ease;
+    font-size: 16px;
+    letter-spacing: 2px;
+    
+
+}
+.login-button:hover{
+    background-color:#14479e;
+}
+.form-input .check{
+    width: 100%;
+    font-size: 13px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+.remember{
+    float: left;
+    width: 50%;
+    height: 20px;
+    text-align: left;   
+}
+.check a{
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+
+}
+.regis-button-popup{
+    text-decoration: none;
+    margin-top: 10px;
+    box-sizing: border-box;
+    width:100%;
+    padding:10px;
+    display: block;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: 700;
+    color:rgb(0,0,0,0.7);
+    transition: 0.3s ease;
+}
+.regis-button-popup:hover{
+    background-color:#c9c9c9 ;
+}
 @media screen and (max-width: 900px){
     .drop{
         width:45px;
@@ -442,7 +590,7 @@ footer p{
         outline: none;
         border-radius: 5px;
         border: 2px solid #3d6cbb;
-        background-image: url(image/dropdown3.png);
+        background-image: url(../image/dropdown3.png);
         background-size: cover;
         background-color: rgba(0, 255, 128, 0);
         transition: background-color 0.4s ease;
@@ -490,12 +638,12 @@ footer p{
     }
     .nav-menu .drop:hover {
         background-color:  #3d6cbb;
-        background-image: url(image/dropdown2.png);
+        background-image: url(../image/dropdown2.png);
         border:2px solid #3d6cbb;
     }
     .drop:focus{
         background-color:  #199bec00;
-        background-image: url(image/dropdown3.png);
+        background-image: url(../image/dropdown3.png);
         border:0;
     }
     .show{

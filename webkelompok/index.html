@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="icon.ico" type="image/x-icon">
     <title>Uservice Home</title>
 </head>
@@ -16,7 +16,7 @@
             <div class="nav-menu">
                 <button class="drop" id="dropImage" onclick="navBarButton()"></button>
                 <div class="menu" id="menuDrop">
-                    <a href="#" class="masuk">Masuk</a>
+                    <a href="#login" class="masuk" id="lgn">Masuk</a>
                     <a href="daftar.html">Gabung Mitra</a>
                     <a href="#layanan">Layanan</a>
                     <a href="tentang.html">Tentang Kami</a>
@@ -133,6 +133,37 @@
         </div>
     </main>
 
+    <div id="login" class="overlay">
+        <div class="login-popup">
+            <a href="#close">
+                <div class="close">&times</div>
+            </a>
+            <div class="wrap-login">
+                <img src="image/logo.png" alt="logo">
+                <h1>Login Uservice</h1>
+                <form class="form-input">
+                    <div class="input-box">
+                        <img src="image/email.png" alt="email">
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="input-box">
+                        <img src="image/lock.png" alt="lock">
+                        <input type="password" name="password" placeholder="Password">
+                    </div>
+                    <div class="check clearfix">
+                        <div class="remember">
+                            <input type="checkbox">
+                            <label>Remember me</label>
+                        </div>
+                        <a href="#">Forgot your account?</a>
+                    </div>
+                    <input type="submit" value="Login" class="login-button">
+                    <a href="#" class="regis-button-popup">Register</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="wrapper-foot">
             <div class="foot-box foot-logo">
@@ -166,19 +197,6 @@
         <p style="font-size: 12px; margin-top: 10px;">Copyright &copy; 2020 Kelompok 5.</p> 
     </footer>
 
-    <script>
-        function navBarButton() {
-          document.getElementById('menuDrop').classList.toggle("show");
-        }
-        
-        window.onclick = function(e) {
-          if (!e.target.matches('.drop')) {
-          var menuDrop = document.getElementById('menuDrop');
-            if (menuDrop.classList.contains('show')) {
-              menuDrop.classList.remove('show');
-            }
-          }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html> 
