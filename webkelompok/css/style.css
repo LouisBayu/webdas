@@ -630,6 +630,7 @@ footer p{
     transition: border 0.2s ease-in-out;
     transition: box-shadow 0.2s ease-in-out;
     margin-bottom: 20px;
+    padding-left: 10px;
 }
 .form-regis label{
     font-family: "Open Sans" , Arial, Helvetica, sans-serif;
@@ -660,7 +661,6 @@ footer p{
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
     font-size: 14px;
-    padding-left: 10px;
 }
 .about-us{
     background-color: #e9ebf9;
@@ -721,6 +721,7 @@ footer p{
     transition: border 0.2s ease-in-out;
     transition: box-shadow 0.2s ease-in-out;
     margin-bottom: 20px;
+    padding-left: 10px;
 }
 .form-contact textarea{
     height: 100px;
@@ -734,7 +735,6 @@ footer p{
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
     font-size: 14px;
-    padding-left: 10px;
 }
 .form-contact .contact-send{
     display: block;

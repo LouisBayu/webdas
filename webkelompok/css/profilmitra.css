@@ -164,6 +164,7 @@ main{
     height: 30px;
     transition: border 0.2s ease-in-out;
     transition: box-shadow 0.2s ease-in-out;
+    padding-left: 10px;
 }
 .order textarea{
     height: 100px;
@@ -177,7 +178,6 @@ main{
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
     font-size: 14px;
-    padding-left: 10px;
 }
 
 
