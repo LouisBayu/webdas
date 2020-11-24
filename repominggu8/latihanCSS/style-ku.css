@@ -1,0 +1,34 @@
+*{
+    padding:40px;
+}
+body{
+    margin:0 auto;
+    border: none;
+    width:60%;
+    border:3px solid black;
+    background-color: lightpink;
+}
+p{
+    border:1px solid black;
+    font-family: serif;
+    line-height: 1.75em;
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 50px;
+    background-color: rgb(206, 255, 218);
+    letter-spacing: 0.5px;
+}
+i{
+    border: none;
+    padding: 0;
+    font-family: sans;
+    color: orange;
+}
+h2{
+    text-align: center;
+    border:2px solid black;
+    font-family: sans;
+    font-size: 30px;
+    color:#333;
+    background-color: lightskyblue;
+}
