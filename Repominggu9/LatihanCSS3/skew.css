@@ -1,0 +1,84 @@
+body{
+    background: #35A9DB;
+    font-family: roboto;
+    text-align: center;
+    }
+    h1,h2{
+    color: #fff;
+}
+.ketengah{
+    margin: 10px auto;
+    width: 1150px;
+}
+.kotak1,.kotak2,.kotak3,.kotak4,.kotak5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.kotak1{
+    background: #fcfcfc;
+}
+.kotak1{
+    background: #fcfcfc;
+    padding: 20px;
+    float: left;
+    margin: 50px;
+    width: 150px;
+    height: 150px;
+}
+.kotak2{
+    background: #fcfcfc;
+    padding: 20px;
+    float: left;
+    margin: 50px;
+    width: 150px;
+    height: 150px;
+    -ms-transform: skew(20deg); /* Support IE 9 */
+    -webkit-transform: skew(20deg); /* support Safari */
+    transform: skew(20deg); /* Standard syntax */
+    transition: 200ms;
+}
+.kotak3{
+    background: #fcfcfc;
+    transition: 200ms;
+    padding: 20px;
+    float: left;
+    margin: 50px;
+    width: 150px;
+    height: 150px;
+    -ms-transform: skew(30deg,20deg); /* Support IE 9 */
+    -webkit-transform: skew(30deg,20deg); /* support Safari */
+    transform: skew(30deg,20deg); /* Standard syntax */
+}
+.kotak4{
+    background: #fcfcfc;
+    transition: 200ms;
+    padding: 20px;
+    float: left;
+    margin: 50px;
+    width: 150px;
+    height: 150px;
+    -ms-transform: skewY(20deg); /* Support IE 9 */
+    -webkit-transform: skewY(20deg); /* support Safari */
+    transform: skewY(20deg); /* Standard syntax */
+}
+.kotak5{
+    transition: 200ms;
+    background: #fcfcfc;
+    padding: 20px;
+    float: left;
+    margin: 50px;
+    width: 150px;
+    height: 150px;
+    -ms-transform: skewX(20deg); /* Support IE 9 */
+    -webkit-transform: skewX(20deg); /* support Safari */
+    transform: skewX(20deg); /* Standard syntax */
+}
+.kotak2:hover,.kotak3:hover,.kotak4:hover,.kotak5:hover{
+    -ms-transform: skewX(0deg); /* Support IE 9 */
+    -webkit-transform: skewX(0deg); /* support Safari */
+    transform: skewX(0deg); /* Standard syntax */   
+    color:white;
+    background: cornflowerblue;
+    box-shadow: 0 0 10px 5px rgba(10, 10, 100, 0.6);
+}

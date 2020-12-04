@@ -1,0 +1,48 @@
+body{
+    background: #35A9DB;
+    font-family: Calibri;
+    color: #fff;
+}
+h1{
+    width: 550px;
+}
+.kotak{
+    background: blue;
+    width: 200px;
+    height: 200px;
+    animation-name: animasi_kotak;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes animasi_kotak{
+    from{ background: blue;}
+    to{background: red;}
+}
+
+.kotak2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #35A9DB;
+    letter-spacing: 2px;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+    background-color: white;
+    width:150px;
+    height:150px;
+    animation-name: jalan;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+}
+
+@keyframes jalan{
+    0%{left:0%;top:0px;}
+    25%{left:1000px;top:0px;}
+    50%{left:1000px;top:100px;}
+    75%{left: 0%;top:100px;}
+    100%{left:0%;top:0px;}
+}

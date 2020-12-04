@@ -1,0 +1,46 @@
+body{
+    background: #35A9DB;
+    font-family: Calibri;
+    text-align: center;
+}
+h1{
+    color: #fff;
+}
+div{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.kotak{
+    background: #fff;
+    width: 150px;
+    height: 150px;
+    transition: width 1s, background 1s, color 1s, box-shadow 1s;
+    -webkit-transition: background 1s,width 1s, color 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.kotak:hover{
+    color:white;
+    background: cornflowerblue;
+    box-shadow: 0 0 10px 5px rgba(10, 10, 100, 0.6);
+    width: 1250px;
+}
+.kotak2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 150px;
+    height: 150px;
+    transition: width 1s, height 2s, background 1s, color 1s, box-shadow 1s;
+    -webkit-transition: width 1s, height 2s, background 1s, color 1s, box-shadow 1s; 
+}
+.kotak2:hover{
+    width: 400px;
+    height: 400px;
+    color:white;
+    background: cornflowerblue;
+    box-shadow: 0 0 10px 5px rgba(10, 10, 100, 0.6);
+}

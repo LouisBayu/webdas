@@ -1,0 +1,48 @@
+body{
+    background: #35A9DB;
+    font-family: Calibri;
+    text-align: center;
+}
+h1,h2{
+    color: #fff;
+    letter-spacing: 1px;
+}
+.ketengah{
+    margin: 10px auto;
+    width: 1150px;
+}
+.kotak1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fcfcfc;
+    padding: 20px;
+    float: left;
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+}
+.kotak2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fcfcfc;
+    padding: 20px;
+    float: left;
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+    -ms-transform: translate(50px,100px); /* Support IE 9 */
+    -webkit-transform: translate(50px,100px); /* support Safari */
+    transform: translate(50px,100px); /* Standard syntax */
+    transition: 200ms;
+}
+
+.kotak2:hover{
+    color:white;
+    background: cornflowerblue;
+    box-shadow: 0 0 10px 5px rgba(10, 10, 100, 0.6);
+    -ms-transform: translate(0px,0px); /* Support IE 9 */
+    -webkit-transform: translate(0px,0px); /* support Safari */
+    transform: translate(0px,0px); /* Standard syntax */
+}
