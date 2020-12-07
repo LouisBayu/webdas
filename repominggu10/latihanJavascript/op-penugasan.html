@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Operator Penugasan</title>
+</head>
+<body>
+    <h3>Operasi Penugasan dengan Javascript</h3>
+    <p>Operator penugasan adalah operator yang digunakan untuk memberikan tugas kepada variabel. Biasanya digunakan untuk mengisi variabel.</p>
+    <p>Contoh :</p>
+    <div id="cetak"></div>
+    <script>
+        function cetak(){
+        var hasilCetak = document.getElementById("cetak");
+        // pengisian nilai
+        var score = Number(prompt("Masukan nilai awal score :"));
+        hasilCetak.innerHTML = ("Mula-mula nilai score <br>&#10145 score = "+ score + "<br/>");
+        // pengisian dan menjumlahan dengan 5
+        score += 5;
+        hasilCetak.innerHTML += ("Score dijumlah dengan 5 <br>&#10145 score = "+ score + "<br/>");
+        // pengisian dan pengurangan dengan 2
+        score -= 2;
+        hasilCetak.innerHTML += ("Score dikurangi 2 <br>&#10145 score = "+ score + "<br/>");
+        // pengisian dan perkalian dengan 2
+        score *= 2;
+        hasilCetak.innerHTML += ("Score dikalikan dengan 2 <br>&#10145 score = "+ score + "<br/>");
+        // pengisian dan pembagian dengan 4
+        score /= 4;
+        hasilCetak.innerHTML += ("Score dibagi 4 <br>&#10145 score = "+ score + "<br/>");
+        // pengisian dan pemangkatan dengan 2
+        score **= 2;
+        hasilCetak.innerHTML += ("Score dipangkatkan 2 <br>&#10145 score = "+ score + "<br/>");
+        // pengisian dan modulo dengan 3;
+        score %= 3;
+        hasilCetak.innerHTML += ("Score dimodulo 3 <br>&#10145 score = "+ score + "<br/>");
+    }
+    cetak()
+    </script>
+    <br><button onclick="cetak()">Input Lagi</button>
+</body>
+</html>

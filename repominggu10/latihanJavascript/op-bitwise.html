@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Operator Bitwise</title>
+</head>
+<body>
+    <h3>Operasi Bitwise di Javascript</h3>
+    <p>Operator bitwise merupakan operator yang digunakan untuk operasi berdasarkan bit (biner)</p>
+    <p>Input Number : </p>
+    <form name="inputNumb">
+        <label>A = </label>
+        <input type="text" name="a"><br/>
+        <label>B = </label>
+        <input type="text" name="b"><br><br/>
+        <input type="button" onclick="cetak()" value="Submit">
+    </form>
+    <div id="cetak"></div>
+    <script>
+        function cetak(){
+        var x = Number(document.inputNumb.a.value);
+        var y = Number(document.inputNumb.b.value);
+        var cetakHasil = document.getElementById("cetak");
+
+        cetakHasil.innerHTML = (`<br>Operasi Bitwise :<br>`);
+        // operator bitwise and
+        var hasil = x & y;
+        cetakHasil.innerHTML += (`Operator Bitwise AND : ${x} & ${y} = ${hasil}<br/>`);
+
+        // operator bitwise or
+        var hasil = x | y;
+        cetakHasil.innerHTML += (`Operator Bitwise OR : ${x} | ${y} = ${hasil}<br/>`);
+
+        // // operator bitwise xor
+        var hasil = x ^ y;
+        cetakHasil.innerHTML += (`Operator Bitwise XOR : ${x} ^ ${y} = ${hasil}<br/>`);
+
+        // // operator negasi
+        var hasil = ~x;
+        cetakHasil.innerHTML += (`Operator Bitwise Negasi : ~${x} = ${hasil}<br/>`);
+
+        // // operator bitwise right shift >>
+        var hasil = x >> y;
+        cetakHasil.innerHTML += (`Operator Bitwise Right Shift : ${x} >> ${y} = ${hasil}<br/>`);
+
+        // // operator bitwise left shift <<
+        var hasil = x << y;
+        cetakHasil.innerHTML += (`Operator Bitwise Left Shift : ${x} << ${y} = ${hasil}<br/>`);
+
+        // // operator bitwise right shift (unsigned) >>>
+        var hasil = x >>> y;
+        cetakHasil.innerHTML += (`Operator Bitwise Right Shift (unsigned) : ${x} >>> ${y} = ${hasil}<br/>`);
+        }
+    </script>
+</body>
+</html>

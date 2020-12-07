@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Belajar Javascript</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Tutorial Javascript untuk Pemula</h1>
+    <div id="hasil-output"></div>
+    <script>
+        document.getElementsByTagName("body")[0].style.backgroundColor = "lightcyan";
+        // membuat objek elemen
+        var hasil = document.getElementById("hasil-output");
+        // menampilkan output ke elemen hasil
+        hasil.innerHTML = "<p>Aku suka Javascript</p>";
+        hasil.innerHTML += "<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam corrupti saepe laudantium obcaecati fugit neque? Dolorem provident, possimus consectetur a facere dicta in illum cupiditate illo repudiandae aut veritatis accusamus!</p>";
+        hasil.style.backgroundColor = " lightgoldenrodyellow";
+        hasil.style.padding = "20px";
+        hasil.style.border = "1.5px solid black";
+    </script>
+    
+</body>
+</html>

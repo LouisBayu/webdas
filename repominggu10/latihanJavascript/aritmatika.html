@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Operator Aritmatika</title>
+</head>
+<body>
+    <h3>Operasi Aritmatika dengan Javascript</h3>
+    <p>Operator aritmatika merupakan operator untuk melakukan operasi aritmatika seperti penjumlahan, pengurangan, pembagian, perkalian, dan lain-lain.</p>
+    <p>Input Number : </p>
+    <form name="inputNumb">
+        <label>A = </label>
+        <input type="text" name="a"><br/>
+        <label>B = </label>
+        <input type="text" name="b"><br><br/>
+        <input type="button" onclick="cetak()" value="Submit">
+    </form>
+    <div id="cetak"></div>
+    <script>
+        function cetak(){
+        var a = Number(document.inputNumb.a.value);
+        var b = Number(document.inputNumb.b.value);
+        var c = a + b;
+        var cetakHasil = document.getElementById("cetak");
+        cetakHasil.innerHTML = (`<br>Operasi Aritmatika :<br>`);
+        // Penjumlahan
+        cetakHasil.innerHTML += (`Penjumlahan  : ${a} + ${b} = ${c}<br/>  `)
+        // pengurangan
+        c = a - b;
+        cetakHasil.innerHTML += (`Pengurangan  : ${a} - ${b} = ${c}<br/>`);
+        // Perkalian
+        c = a * b;
+        cetakHasil.innerHTML += (`Perkalian    : ${a} * ${b} = ${c}<br/>`);
+        // Pembagian
+        c = a / b;
+        cetakHasil.innerHTML += (`Pembagian    : ${a} / ${b} = ${c}<br/>`);
+        // pemangkatan
+        c = a ** b;
+        cetakHasil.innerHTML += (`Perpangkatan : ${a} ** ${b} = ${c}<br/>`);
+        // Modulo
+        c = a % b;
+        cetakHasil.innerHTML += (`Modulo       : ${a} % ${b} = ${c}<br/>`);
+        }
+    </script>
+</body>
+</html>

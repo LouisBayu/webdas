@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Operator Ternary</title>
+</head>
+<body>
+    <h3>Operasi Ternary di Javascript</h3>
+    <p>Operator ternary merupakan operator yang teridiri dari <b>tiga bagian</b>, operator-operator sebelumnya hanya <b>dua bagian</b> saja, yaitu: bagian <b>kiri dan kanan</b>. Ini disebut operator binary, sementara operator trinary ada bagian <b>kiri, tengah, dan kanan</b>.</p>
+    <button onclick="check()">Check</button>
+    <div id="cetak"></div>
+    <script>
+        function check(){
+            var pertanyaan = confirm("Apakah kamu berumur diatas 18 tahun?")
+            var hasil = pertanyaan ? "<br>Selamat datang" : "<br>Kamu tidak boleh disini";
+            document.getElementById("cetak").innerHTML = hasil;
+        }
+    </script>
+</body>
+</html>

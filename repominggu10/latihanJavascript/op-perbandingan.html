@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Operator Perbandingan</title>
+</head>
+<body>
+    <h3>Operasi Perbandingan di Javascript</h3>
+    <p>Operator relasi atau perbandingan adalah operator yang digunakan untuk membandingkan dua nilai, operator perbandingan akan menghasilkan sebuah nilai boolean <b>true</b> dan <b>false</b>.</p>
+    <p>Input Number : </p>
+    <form name="inputNumb">
+        <label>A = </label>
+        <input type="text" name="a"><br/>
+        <label>B = </label>
+        <input type="text" name="b"><br><br/>
+        <input type="button" onclick="cetak()" value="Submit">
+    </form>
+    <div id="cetak"></div>
+    <script>
+        function cetak(){
+        var aku = Number(document.inputNumb.a.value);
+        var kamu = Number(document.inputNumb.b.value);
+        var cetakHasil = document.getElementById("cetak");
+        cetakHasil.innerHTML = (`<br>Operasi Perbandingan :<br>`);
+        // sama dengan
+        var hasil = aku == kamu;
+        cetakHasil.innerHTML += (`${aku} == ${kamu} &#10141 ${hasil}<br/>`);
+
+        // lebih besar
+        var hasil = aku > kamu;
+        cetakHasil.innerHTML += (`${aku} > ${kamu} &#10141 ${hasil}<br/>`);
+
+        // lebih besar samadengan
+        var hasil = aku >= kamu;
+        cetakHasil.innerHTML += (`${aku} >= ${kamu} &#10141 ${hasil}<br/>`);
+
+        // lebih kecil
+        var hasil = aku < kamu;
+        cetakHasil.innerHTML += (`${aku} < ${kamu} &#10141 ${hasil}<br/>`);
+
+        // lebih kecil samadengan
+        var hasil = aku <= kamu;
+        cetakHasil.innerHTML += (`${aku} <= ${kamu} &#10141 ${hasil}<br/>`);
+
+        // tidak samadengan
+        var hasil = aku != kamu;
+        cetakHasil.innerHTML += (`${aku} != ${kamu} &#10141 ${hasil}<br/>`);
+        }
+    </script>
+</body>
+</html>

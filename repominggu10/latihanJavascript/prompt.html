@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dialog Prompt</title>
+</head>
+<body>
+    <script>
+        var nama = prompt("Siapa nama kamu?");
+        document.write("<p>Selamat datang "+ nama +"</p>");
+        document.write("Saya sedang belajar Javascript.")
+    </script>
+    <br><br><button onclick="gantiWarnaBG()">Change Background</button>
+    <script>
+        function gantiWarnaBG(){
+            var warna = prompt("Input Warna (Merah/Kuning/Hijau/Biru) :").toLowerCase()
+            if (warna == "biru"){
+                document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
+            } else if (warna == "merah"){
+                document.getElementsByTagName("body")[0].style.backgroundColor = "red";
+            } else if (warna == "kuning"){
+                document.getElementsByTagName("body")[0].style.backgroundColor = "yellow";
+            } else if (warna == "hijau"){
+                document.getElementsByTagName("body")[0].style.backgroundColor = "green";
+            }
+        }
+    </script>
+</body>
+</html>

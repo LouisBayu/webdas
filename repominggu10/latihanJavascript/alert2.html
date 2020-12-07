@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dialog Alert</title>
+</head>
+<body>
+    <p>Mencoba Alert Dialog</p>
+    <form name="formCoba">
+        <br><label>Nama</label>
+        <input type="text" name="nama">
+        <br><br><input type="button" onclick="cobaFungsi()" value="Submit">
+        <!-- <button onclick="cobaFungsi()">Klik Saya</button> -->
+    </form>
+    <div id="greeting"></div>
+    <script>
+        function cobaFungsi(){
+            var namaVisitor = (document.formCoba.nama.value);
+            document.getElementById("greeting").innerHTML = "<br>Selamat Datang " + namaVisitor ;
+            alert("Selamat Datang " + namaVisitor );
+        }
+    </script>
+</body>
+</html>
