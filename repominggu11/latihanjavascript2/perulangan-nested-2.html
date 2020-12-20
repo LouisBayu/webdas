@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nested Loop</title>
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        .card{
+            margin:100px auto;
+            width:50%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px rgb(0, 0, 0,0.2);
+            padding:40px;
+        }
+        h3{
+            margin: 0;
+            letter-spacing: 1px;
+            font-size: 20px ;
+        }
+        #tabel{
+            margin: 0 auto;
+            margin-top: 20px;
+            text-align: left;
+        }
+        p{
+            margin:3px;
+        }
+        td{
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div id="cetak"></div>
+        <br><button type="button" onclick="coba()">Coba Lagi</button>
+    </div>
+    <script>
+        function coba(){
+            document.getElementById("cetak").innerHTML = ("<h3>Contoh Nested Loop dengan While dan Repeat<br>(Cetak Bintang)</h3>");
+            document.getElementById("cetak").innerHTML += ('<table id="tabel"></table>');
+
+            var ulangi = confirm("Apakah Anda Ingin Mengulang?\n(Klik OK Sebanyak yang Diinginkan/Cancel untuk Berhenti)");
+            var counter = 0;
+            while (ulangi) {
+            counter++;
+            var bintang = "&#9733".repeat(counter);
+            document.getElementById("tabel").innerHTML += (`<tr><td>${counter}</td><td>: ${bintang}</td></tr>`);
+            ulangi = confirm("Apakah Anda Ingin Mengulang?\n(Klik OK Sebanyak yang Diinginkan/Cancel untuk Berhenti)");
+            }
+        }
+        coba();
+    </script>
+    
+</body>
+</html>

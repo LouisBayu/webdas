@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mengambil Data dari Array</title>
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        .card{
+            margin:100px auto;
+            width:40%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px rgb(0, 0, 0,0.2);
+            padding:40px;
+        }
+        h2,h3{
+            margin: 20px;
+        }
+        h2{
+            font-size: 70px;
+            color: red;
+        }
+        h3{
+            letter-spacing: 1px;
+            font-size: 20px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div id="cetak"></div>
+        <br><button type="button" onclick="coba()">Coba Lagi</button>
+    </div>
+    <script>
+        // membuat array
+        var products = ["Senter", "Radio", "Antena", "Obeng", "Payung", "Mouse", "Keyboard", "Laptop", "Smartphone", "Headset"];
+        function coba(){
+            var index = Number(prompt("Masukkan Index Array :\n(0-9) "))
+            // mengambil elemen array
+            document.getElementById("cetak").innerHTML = (`<h3>Elemen Array Index ke-${index} : </h3>`);
+            document.getElementById("cetak").innerHTML += (`<h2>${products[index]}</h2>`);
+        }
+        coba()
+    </script>
+</body>
+</html>

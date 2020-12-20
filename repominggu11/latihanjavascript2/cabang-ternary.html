@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Percabangan Ternary</title>
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        #cetak{
+            margin:100px auto;
+            width:40%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px rgb(0, 0, 0,0.2);
+            padding:40px;
+        }
+        h2{
+            color: royalblue;
+            letter-spacing: 1px;
+            font-size: 45px ;
+        }
+        h3{
+            font-size: 30px;
+        }
+        #true{
+            color: royalblue;
+        }
+        #false{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="cetak"></div>
+    <script>
+        var jwb = prompt("Apakah Jakarta Ibu Kota Indonesia? (Ya/Tidak)");
+        var jawaban = (jwb.toUpperCase() == "YA") ? '<h2 id="true">BENAR</h2>': '<h2 id="false">SALAH</h2>';
+        document.getElementById("cetak").innerHTML = ("<h3>Jawaban Anda :</h3>" + jawaban);
+    </script>
+</body>
+</html>

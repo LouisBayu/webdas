@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Foreach Loop</title>
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        #cetak{
+            margin:100px auto;
+            width:40%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px rgb(0, 0, 0,0.2);
+            padding:40px;
+        }
+        h3{
+            margin: 0;
+            letter-spacing: 1px;
+            font-size: 20px ;
+        }
+        #tabel{
+            margin: 0 auto;
+            margin-top: 20px;
+            text-align: left;
+        }
+        td,th{
+            padding:5px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cetak"></div>
+    <script>
+        document.getElementById("cetak").innerHTML = ("<h3>Contoh Perulangan Foreach menggunakan operator in<br>(Cetak Elemen pada Array)</h3>");
+        document.getElementById("cetak").innerHTML += ('<table id="tabel"><tr><th>Index</th><th>Elemen</th></tr></table>');
+
+        var languages = ["Javascript", "HTML", "CSS", "Typescript"];
+        for(i in languages){
+            document.getElementById("tabel").innerHTML += (`<tr><td>${i}</td><td>${languages[i]}</td></tr>`);
+        }
+    </script>
+</body>
+</html>

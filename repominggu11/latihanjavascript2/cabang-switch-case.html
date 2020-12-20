@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Percabangan SWITCH/CASE</title>
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        #card{
+            margin:100px auto;
+            width:40%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px rgb(0, 0, 0,0.2);
+            padding:40px;
+        }
+        h2{
+            letter-spacing: 1px;
+            font-size: 35px ;
+        }
+        p{
+            margin: 10px;
+            font-size: 20px;
+        }
+        fieldset p{
+            font-size: 15px;
+        }
+        fieldset{
+            padding:30px;
+            padding-top: 0;
+            font-size: 20px;
+            letter-spacing: 1px;
+            border-radius: 5px;
+        }
+        legend{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="card">
+        <fieldset>
+            <p>Kamu beruntung! Silahakan pilih hadiahmu dengan memasukan angka 1 sampai 5</p>
+            <legend><b>Nomor Hadiah</b></legend>
+            <form name="inputNumb">
+                <label>Input Nomor</label>
+                <input type="number" name="number"/>
+                <input type="button" value="Submit" onclick="check()"/>
+            </form>
+        </fieldset>
+    </div>
+    <script>
+    function check(jawab){
+        var jawab = document.inputNumb.number.value;
+        var hadiah = "";
+        switch(jawab){
+            case "1":
+            hadiah = "Tisu";
+            break;
+            case "2":
+            hadiah = "1 Kotak Kopi";
+            break;
+            case "3":
+            hadiah = "Sticker";
+            break;
+            case "4":
+            hadiah = "Minyak Goreng";
+            break;
+            case "5":
+            hadiah = "Uang Rp 50.000";
+            break;
+            default:
+            document.getElementById("card").innerHTML = ("<p>Opps! anda salah pilih</p>");
+        }
+        
+        if(hadiah === ""){
+        document.getElementById("card").innerHTML += ("<p>Kamu gagal mendapat hadiah</p>");
+        } else {
+        document.getElementById("card").innerHTML = ("<h2>Selamat kamu mendapatkan " + hadiah + "</h2>");
+        }
+    }
+    
+</script>
+</body>
+</html>

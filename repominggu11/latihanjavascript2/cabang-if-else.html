@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Percabangan IF/ELSE</title>
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        #login{
+            margin:100px auto;
+            width:40%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px rgb(0, 0, 0,0.2);
+            padding:40px;
+        }
+        h2{
+            letter-spacing: 1px;
+            font-size: 40px ;
+        }
+        fieldset{
+            padding:30px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            border-radius: 5px;
+        }
+        legend{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="login">
+        <fieldset>
+            <legend><b>MASUKKAN PASSWORD</b></legend>
+            <form name="inputPass">
+                <label>Password : </label>
+                <input type="password" name="password" placeholder="Password"/>
+                <input type="button" value="Check" onclick="check()"/>
+            </form>
+        </fieldset>
+        <div id="status"></div>
+    </div>
+    <script>
+        var passwordSet = prompt("Set Password Anda : ");
+        function check(){
+            var passwordIn = document.inputPass.password.value;
+            if(passwordIn == passwordSet){
+            document.getElementById("login").innerHTML = ("<h2>Selamat Datang Bos!</h2>");
+            document.getElementById("login").innerHTML+= ("<p>Terima kasih sudah menggunakan aplikasi ini!</p>");
+        } else {
+            document.getElementById("status").innerHTML = ("<p>Password salah, coba lagi!</p>");
+        }
+        }
+        
+    </script>
+</body>
+</html>

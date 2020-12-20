@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array dan Perulangan</title>
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        #cetak{
+            margin:100px auto;
+            width:40%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px rgb(0, 0, 0,0.2);
+            padding:40px;
+        }
+        h3{
+            margin: 0;
+            letter-spacing: 1px;
+            font-size: 23px ;
+        }
+        ol{
+            font-weight: bold;
+            margin:0 auto;
+            width:40%;
+            text-align: left;
+            padding:20px;
+        }
+        li{
+            font-weight: bold;
+        }
+        p{
+            text-indent: 15px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div id="cetak"></div>
+    <script>
+        document.getElementById("cetak").innerHTML = ("<h3>Daftar Produk dalam Array :</h3>");
+        document.getElementById("cetak").innerHTML += ('<ol id="list"></ol>');
+
+        // membuat array
+        var products = ["Senter", "Radio", "Antena", "Obeng", "Mouse", "Keyboard", "Smartphone", "Laptop", "Headset", "Lampu"];
+
+        // menggunakan perulangan untuk mencetak semua isi array
+        for(i in products){
+            document.getElementById("list").innerHTML += (`<li><p>${products[i]}</p></li>`);
+        }
+
+    </script>
+</body>
+</html>

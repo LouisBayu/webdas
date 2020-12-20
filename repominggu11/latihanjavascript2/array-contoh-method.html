@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Contoh Method</title>
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        .card{
+            height: 450px;
+            position: relative;
+            margin:100px auto;
+            width:40%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px rgb(0, 0, 0,0.2);
+            padding:40px;
+            padding-bottom: 60px;
+        }
+        h3{
+            letter-spacing: 1px;
+            font-size: 40px ;
+        }
+        p{
+            letter-spacing: 0.5px;
+            font-size: 15px;
+            
+        }
+        .list,.hasil{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .list{
+            color:blue;
+        }
+        .hasil{
+            color:green;
+            margin-bottom: 0;
+        }
+        .arah{
+            /* width:30px;
+            height:30px; */
+            padding: 5px;
+            position:absolute;
+        }
+        .prev{
+            bottom:10px;
+            left:10px;
+        }
+        .next{
+            bottom:10px;
+            right:10px;
+        }
+        .button{
+            margin: 0;
+            width:180px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <button class="arah prev" type="button" onclick="prev()">&#9664 Prev Method</button>
+        <button class="arah next" type="button" onclick="next()">Next Method &#9658</button>
+        <div id="cetak"></div>
+    </div>
+    <script>
+        function cetakHalaman(page){
+            if (page == 1){
+                // Method filter
+                // ambil data yang hanya habis dibagi dua
+                const filteredArray = angka.filter(item => item % 2 === 0);
+                console.log(filteredArray) // -> [2, 4, 6, 8]
+
+                // cetak
+                document.getElementById("cetak").innerHTML = (`<h3>Method filter()</h3>`);
+                document.getElementById("cetak").innerHTML += (`<p class="list">List = [${angka}]</p>`);
+                document.getElementById("cetak").innerHTML += (`<p>- Menggunakan method filter() untuk menfilter data yang habis dibagi 2 -<br><b>filter(item => item % 2 === 0))</b></p>`);
+                document.getElementById("cetak").innerHTML += (`<p class="hasil">Hasil : ${filteredArray}</p>`);
+                document.getElementById("cetak").innerHTML += (`<br><button class="button" type="button" onclick="add()">Tambah Data</button>`);
+                document.getElementById("cetak").innerHTML += (`<br><button class="button" type="button" onclick="del()">Hapus Data Belakang</button>`);
+
+
+            } else if(page == 2){
+                // cetak
+                document.getElementById("cetak").innerHTML = (`<h3>Method includes()</h3>`);
+                document.getElementById("cetak").innerHTML += (`<p class="list">List = [${tanaman}]</p>`);
+                document.getElementById("cetak").innerHTML += (`<p>- Menggunakan method includes() untuk mengecek apakah ada data tertentu dalam list -<br><b>includes("Kacang")</b></p>`);
+                document.getElementById("cetak").innerHTML += (`<br><button class="button" type="button" onclick="check()">Coba Method</button>`);
+                document.getElementById("cetak").innerHTML += (`<br><button class="button" type="button" onclick="add()">Tambah Data</button>`);
+                document.getElementById("cetak").innerHTML += (`<br><button class="button" type="button" onclick="del()">Hapus Data Akhir</button>`);
+                document.getElementById("cetak").innerHTML += (`<div id="status"></div>`);
+
+            } else {
+                // cetak
+                document.getElementById("cetak").innerHTML = (`<h3>Method sort()</h3>`);
+                document.getElementById("cetak").innerHTML += (`<p class="list">Alfabet = [${alfabet}]</p>`);
+                document.getElementById("cetak").innerHTML += (`<p class="list">Angka = [${angka2}]</p>`);
+                document.getElementById("cetak").innerHTML += (`<p>- Menggunakan method sort() untuk mengurutkan elemen dalam list -<br><b>list.sort()</b></p>`);
+                document.getElementById("cetak").innerHTML += (`<br><button class="button" type="button" onclick="urut()">Urutkan</button>`);
+                document.getElementById("cetak").innerHTML += (`<br><button class="button" type="button" onclick="add('alfabet')">Tambah Alfabet</button>`);
+                document.getElementById("cetak").innerHTML += (`<br><button class="button" type="button" onclick="add('angka')">Tambah Angka</button>`);
+                document.getElementById("cetak").innerHTML += (`<div id="status"></div>`);
+
+            }
+            
+        }
+        function urut(){
+            alfabet.sort();
+            angka2.sort();
+            cetakHalaman(currentPage);
+        }
+        function check(){
+            var cek = prompt("Masukkan elemen yang akan di cek ke List : ");
+            // Method Includes
+            var status = tanaman.includes(cek);
+            console.log(status);
+            document.getElementById("status").innerHTML = (`<p>Apakah ada ${cek} dalam List?</p><p><b>${status}</b></p>`);
+            if (status == true) document.getElementsByTagName("p")[3].style.color = "green";
+            else document.getElementsByTagName("p")[3].style.color = "red";
+
+        }
+        function del(){
+            if (currentPage == 1){
+                angka.pop();
+                cetakHalaman(currentPage);
+            }
+            else if (currentPage == 2){
+                tanaman.pop();
+                cetakHalaman(currentPage);
+            }
+
+        }
+        function add(pil){
+            if (currentPage == 1){
+                angka.push(Number(prompt("Masukkan Angka : ")));
+                cetakHalaman(currentPage);
+            }
+            else if (currentPage == 2){
+                tanaman.push(prompt("Masukkan Data : "));
+                cetakHalaman(currentPage);
+            }
+            else {
+                if (pil == "alfabet") alfabet.push(prompt("Masukkan alfabet : "));
+                else angka2.push(Number(prompt("Masukkan Angka : ")))
+                cetakHalaman(currentPage);
+            }
+        }
+        function prev(){
+            if (currentPage == 1) currentPage = 3;
+            else currentPage -= 1;
+            cetakHalaman(currentPage);
+        }
+        function next(){
+            if (currentPage == 3) currentPage = 1;
+            else currentPage += 1;
+            cetakHalaman(currentPage);
+        }
+
+        // driver
+        var angka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var tanaman = ["Padi", "Kacang", "Jagung", "Kedelai"];
+        var alfabet = ['a','f','z','e','r','g'];
+        var angka2 = [3,1,2,6,8,5];
+        var currentPage = 1;
+        cetakHalaman(currentPage);
+
+    </script>
+</body>
+</html>

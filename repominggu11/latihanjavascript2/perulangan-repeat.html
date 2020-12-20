@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Repeat Loop</title>
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        .card{
+            margin:100px auto;
+            width:50%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px rgb(0, 0, 0,0.2);
+            padding:40px;
+        }
+        h3{
+            margin: 0;
+            letter-spacing: 1px;
+            font-size: 20px ;
+        }
+        p{
+            margin:3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div id="cetak">
+            <h3>Contoh Perulangan Repeat<br>(Cetak Kalimat 100 Kali)</h3>
+            <br>
+        </div>
+        <br><button type="button" onclick="coba()">Coba Lagi</button>
+    </div>
+    <script>
+        document.getElementById("cetak").innerHTML += (`<p>Ulangi Kalimat Ini!</p>`.repeat(100));
+        function coba(){
+            var kalimat = prompt("Tulis Kalimat yang Ingin Diulang : ")
+            var n = Number(prompt("Masukan banyak pengulangan : "))
+            document.getElementById("cetak").innerHTML = (`<h3>Contoh Perulangan Repeat<br>(Cetak Kalimat ${n} Kali)</h3><br>`);
+            document.getElementById("cetak").innerHTML += (`${kalimat}<br/>`.repeat(n));
+        }
+    </script>
+    
+</body>
+</html>

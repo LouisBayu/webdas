@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Foreach Loop</title>
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        #cetak{
+            margin:100px auto;
+            width:40%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px rgb(0, 0, 0,0.2);
+            padding:40px;
+        }
+        h3{
+            margin: 0;
+            letter-spacing: 1px;
+            font-size: 20px ;
+        }
+    </style>
+</head>
+<body>
+    <div id="cetak">
+        <h3>Contoh Perulangan Foreach dengan method foreach()<br>(Cetak Nama Hari dari Array)</h3>
+        <br>
+    </div>
+
+    <script>
+
+        // kita punya array seperti berikut
+        var days = ["Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu","Minggu"];
+        
+        // Kemudian kita tampilkan semua hari
+        // dengan menggunakan method foreach
+        // function(day){} dapat ditulis mjd (day) => {}
+        days.forEach((day) => {
+            document.getElementById("cetak").innerHTML += (`<b><p>${day}</p></b>`);
+        });
+    </script>
+    
+</body>
+</html>

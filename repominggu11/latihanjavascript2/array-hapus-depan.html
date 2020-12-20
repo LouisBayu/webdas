@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Menghapus Data Depan Array</title>
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        .card{
+            margin:100px auto;
+            width:40%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px rgb(0, 0, 0,0.2);
+            padding:40px;
+        }
+        h3{
+            margin: 0;
+            letter-spacing: 1px;
+            font-size: 23px ;
+        }
+        button{
+            width:200px;
+            margin-top: 5px;
+        }
+        #tabel{
+            margin: 0 auto;
+            margin-top: 20px;
+            text-align: left;
+        }
+        td,th{
+            padding:5px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div id="cetak"></div>
+        <br><button type="button" onclick="add()">Tambah Elemen</button>
+        <br><button type="button" onclick="edit()">Edit Elemen</button>
+        <br><button type="button" onclick="delDepan()">Hapus Elemen Pertama</button>
+    </div>
+    <script>
+        document.getElementById("cetak").innerHTML = ("<h3>Daftar Bunga dalam Array :</h3>");
+        document.getElementById("cetak").innerHTML += ('<table id="tabel"><tr><th>Index</th><th>Elemen</th></tr></table>');
+
+        // membuat array
+        var bunga = ["Mawar", "Melati", "Anggrek", "Sakura"];
+
+        // menampilkan isi array
+        // menggunakan perulangan untuk mencetak semua isi array
+        for(i in bunga){
+            document.getElementById("tabel").innerHTML += (`<tr><td>${i}</td><td>${bunga[i]}</td></tr>`);
+        }
+
+        function add(){
+            document.getElementById("cetak").innerHTML = ("<h3>Daftar Bunga dalam Array :</h3>");
+            document.getElementById("cetak").innerHTML += ('<table id="tabel"><tr><th>Index</th><th>Elemen</th></tr></table>');
+            
+            var elemenIn = prompt("Masukkan Bunga : ");
+            bunga.push(elemenIn);
+            for(i in bunga){
+                document.getElementById("tabel").innerHTML += (`<tr><td>${i}</td><td>${bunga[i]}</td></tr>`);
+            }
+        }
+        function delDepan(){
+            document.getElementById("cetak").innerHTML = ("<h3>Daftar Bunga dalam Array :</h3>");
+            document.getElementById("cetak").innerHTML += ('<table id="tabel"><tr><th>Index</th><th>Elemen</th></tr></table>');
+            bunga.shift();
+            for(i in bunga){
+                document.getElementById("tabel").innerHTML += (`<tr><td>${i}</td><td>${bunga[i]}</td></tr>`);
+            }
+        }
+        function edit(){
+            document.getElementById("cetak").innerHTML = ("<h3>Daftar Bunga dalam Array :</h3>");
+            document.getElementById("cetak").innerHTML += ('<table id="tabel"><tr><th>Index</th><th>Elemen</th></tr></table>');
+            
+            var index = Number(prompt("Masukkan Index yang Ingin Diedit : "));
+
+            if (index >= bunga.length){
+                alert("Index Salah!")
+            } else{
+                var elemenEdit = prompt("Masukkan Produk : ");
+                bunga[index] = elemenEdit;
+            }
+            
+            for(i in bunga){
+                document.getElementById("tabel").innerHTML += (`<tr><td>${i}</td><td>${bunga[i]}</td></tr>`);
+            }
+        }
+    </script>
+</body>
+</html>

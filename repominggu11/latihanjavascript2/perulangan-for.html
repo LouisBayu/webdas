@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>For Loop</title>
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        .card{
+            margin:100px auto;
+            width:40%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px rgb(0, 0, 0,0.2);
+            padding:40px;
+        }
+        p{
+            margin:2px;
+        }
+        h2{
+            letter-spacing: 1px;
+            font-size: 20px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div id="cetak"></div>
+        <br><button type="button" onclick="loop()">Coba Lagi</button>
+    </div>
+    <script>
+        document.getElementById("cetak").innerHTML = ("<h2>Contoh Perulangan For (Mundur) :</h2>");
+        for (let i=10; i> 0; i--){
+            document.getElementById("cetak").innerHTML += (`<p>Perulangan Ke-${i}</p>`);
+        }
+        function loop(){
+            var n = Number(prompt("Masukkan Banyak Perulangan : "));
+           
+            document.getElementById("cetak").innerHTML = (`<h2>Contoh Perulangan For (Mundur) ${n} Kali :</h2>`);
+            for (let i=n; i> 0; i--){
+                document.getElementById("cetak").innerHTML += (`<p>Perulangan Ke-${i}</p>`);
+            }
+        }
+    </script>
+</body>
+</html>

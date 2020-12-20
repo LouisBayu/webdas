@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Percabangan IF/ELSE/IF</title>
+    <style>
+        body{
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        #card{
+            margin:100px auto;
+            width:40%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px 2px rgb(0, 0, 0,0.2);
+            padding:40px;
+        }
+        h2{
+            letter-spacing: 1px;
+            font-size: 40px ;
+        }
+        h3{
+            color:red;
+        }
+        fieldset{
+            padding:30px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            border-radius: 5px;
+        }
+        legend{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="card">
+        <fieldset>
+            <legend><b>Input Nilai</b></legend>
+            <form name="inputNilai">
+                <label>Nilai Akhir : </label>
+                <input type="number" name="nilai" placeholder="Nilai"/>
+                <input type="button" value="Submit" onclick="check()"/>
+            </form>
+            <div id="cetak"></div>
+        </fieldset>
+    </div>
+    <script>
+        function check(){
+
+        var nilai = Number(document.inputNilai.nilai.value);
+        var grade = "";
+        if(nilai >= 90) grade = "A"
+        else if(nilai >= 80) grade = "B+"
+        else if(nilai >= 70) grade = "B"
+        else if(nilai >= 60) grade = "C+"
+        else if(nilai >= 50) grade = "C"
+        else if(nilai >= 40) grade = "D"
+        else if(nilai >= 30) grade = "E"
+        else grade = "F";
+        
+        document.getElementById("cetak").innerHTML = (`<h3>Grade Nilai Anda = ${grade}</h3>`);
+        }
+    </script>
+</body>
+</html>
