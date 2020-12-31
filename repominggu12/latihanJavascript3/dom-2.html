@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM API Javascript</title>
+</head>
+<body style="font-family: 'Calibri';">
+    <div class="judul"></div>
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+        quaerat recusandae qui ullam eaque cumque ea fugit, debitis commodi ipsum illo
+        dolorum consequatur sed laudantium suscipit quis magni, maiores in?</p>
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+        quaerat recusandae qui ullam eaque cumque ea fugit, debitis commodi ipsum illo
+        dolorum consequatur sed laudantium suscipit quis magni, maiores in?</p>
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+        quaerat recusandae qui ullam eaque cumque ea fugit, debitis commodi ipsum illo
+        dolorum consequatur sed laudantium suscipit quis magni, maiores in?</p>
+    <script>
+        var judul = document.getElementsByClassName("judul")[0];
+        judul.innerText = 'Javascript DOM';
+        judul.style.fontWeight = "bold";
+        judul.style.fontSize = "50px";
+        judul.style.textAlign = 'center';
+        judul.style.padding = '20px';
+        judul.style.backgroundColor = "gold";
+        judul.style.margin = "0";
+
+        var paragraf = document.getElementsByClassName("paragraf");
+        console.log(paragraf);
+        for (let i = 0; i < paragraf.length; i++) {
+            paragraf[i].style.padding = "40px";
+            paragraf[i].style.margin = "0";
+            paragraf[i].style.fontSize = "20px";
+            paragraf[i].style.letterSpacing = "1px";
+            paragraf[i].style.textAlign = "justify";
+
+        }
+
+        paragraf[0].style.backgroundColor = "black";
+        paragraf[0].style.color = "white";
+        paragraf[1].style.backgroundColor = "#3a53a5";
+        paragraf[1].style.color = "#e8e613";
+        paragraf[2].style.backgroundColor = "#7a1315";
+        paragraf[2].style.color = "white";
+    </script>
+</body>
+</html>

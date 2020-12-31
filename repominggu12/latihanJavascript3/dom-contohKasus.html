@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM API Javascript</title>
+</head>
+<body style="font-family: 'Calibri';">
+    <h1 style="text-align: center;">Aplikasi Ubah Warna</h1>
+    <table style="margin:0 auto;">
+        <tr>
+            <td>
+                <label>Ubah Warna Background Judul</label>
+            </td>
+            <td>
+                : <input type="color" id="bg-color"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Ubah Warna Teks Judul</label>
+            </td>
+            <td>
+                : <input type="color" id="text-color"/>
+            </td>
+        </tr>
+    </table>
+    <script>
+        var bgColor = document.getElementById('bg-color');
+        var txtColor = document.getElementById('text-color');
+        var judul = document.getElementsByTagName('h1')[0];
+        bgColor.addEventListener("change", (event) => {
+            judul.style.backgroundColor = bgColor.value;
+        });
+        txtColor.addEventListener("change", (event) => {
+            judul.style.color = txtColor.value;
+        });
+        judul.style.padding = '20px';
+        judul.style.fontSize = '50px';
+
+    </script>
+</body>
+</html>

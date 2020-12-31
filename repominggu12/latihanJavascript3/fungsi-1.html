@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fungsi Javascript</title>
+    <script>
+        // membuat fungsi
+        var sayHello = () => {
+            alert("Hello World! Selamat Datang :)")
+            var text = document.createElement('h1');
+            text.textContent = 'Hello :)';
+            text.style.backgroundColor = "gold";
+            text.style.textAlign = 'center';
+            text.style.fontSize = '50px';
+            text.style.padding = '20px';
+            document.body.prepend(text);
+        };
+    </script>
+</head>
+<body style="text-align: center; font-family: 'Calibri';">
+    <!-- Memanggil fungsi saat link diklik -->
+    <button onclick="sayHello()">Klik Aku!</button>
+</body>
+</html>

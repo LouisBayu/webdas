@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memilih Elemen Berdasarkan ID</title>
+</head>
+<body id="body">
+    <!-- Elemen div yang akan dipilih dari JS -->
+    <div id="tutorial"></div>
+    <div id="isi"></div>
+    <script type="text/javascript">
+        // mengakses elemen tutorial
+        var tutorial = document.getElementById("tutorial");
+        // mengisi teks ke dalam elemen
+        tutorial.innerText = "Tutorial DOM Javascript";
+        // memberikan CSS ke elemen
+        tutorial.style.backgroundColor = "gold";
+        tutorial.style.padding = "20px";
+        tutorial.style.fontSize = "50px";
+        tutorial.style.fontWeight = "bold";
+        tutorial.style.textAlign = "center";
+        document.getElementById('body').style.fontFamily = "Calibri";
+
+        var isi = document.getElementById("isi");
+        isi.innerText = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo deleniti quasi voluptatum, doloribus vero impedit quaerat mollitia sunt blanditiis ipsum nihil! Aperiam debitis libero soluta vero ex ipsa assumenda itaque!';
+        isi.style.padding = "40px";
+        isi.style.backgroundColor = "black";
+        isi.style.color = "white";
+        isi.style.fontSize = "20px";
+        isi.style.letterSpacing = "1px";
+
+    </script>
+</body>
+</html>

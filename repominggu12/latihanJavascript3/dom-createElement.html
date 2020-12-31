@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM API Javascript</title>
+</head>
+<body style="font-family: 'Calibri';">
+    <script>
+        // membuat element h1
+        var judul = document.createElement("h1");
+        // mengisi kontent elemen
+        judul.textContent = "Belajar DOM Javascript";
+        // menambahkan elemen ke dalam tag body
+        document.body.append(judul);
+
+        // styling judul
+        judul.style.backgroundColor = "gold";
+        judul.style.textAlign = 'center';
+        judul.style.fontSize = '50px';
+        judul.style.padding = '20px';
+        
+        // membuat element p
+        var paragraf = document.createElement("p");
+        paragraf.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ad unde necessitatibus aperiam nam dicta quia id explicabo! Rerum molestias aperiam totam sunt distinctio nihil, aliquam esse quos adipisci rem?';
+        document.body.append(paragraf);
+        
+        // styling p
+        paragraf.style.letterSpacing = '1px';
+        paragraf.style.textAlign = 'justify';
+        paragraf.style.fontSize = '20px';
+        paragraf.style.padding = '40px';
+        paragraf.style.backgroundColor = 'lightblue';
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Belajar Objek Javascript</title>
+    <style>
+        body {
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            margin: 100px auto;
+            width: 40%;
+        }
+        h1 {
+            letter-spacing: 1px;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        #judul{
+            background-color: white;
+            padding:10px;
+            border-radius: 5px;
+        }
+        .card{
+            background-color: white;
+            padding:5px;
+            border-radius: 5px;
+            margin:10px;
+            padding:10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button{
+            width:100px;
+            padding:8px;
+            margin:10px;
+        }
+        hr{
+            border:none;
+            margin:10px;
+            background-color: white;
+            height: 1px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div id="judul">
+            <h1>Daftar Objek Person</h1>
+        </div>
+        <hr>
+        <div id="list"></div>
+        <div id="button">
+            <button onclick="add()">Tambah Data</button>
+            <button onclick="del()">Hapus Data</button>
+        </div>
+    </div>
+    <script>
+        function Person(firstName, lastName) {
+            // properti
+            this.firstName = firstName;
+            this.lastName = lastName;
+            // method
+            this.fullName = function () {
+                return `${this.firstName} ${this.lastName}`
+            }
+            this.showName = function () {
+                var list = document.getElementById('list');
+                list.innerHTML += `<div class="card">${this.fullName()}</div>`;
+            }
+        }
+        
+        var person1 = new Person("Agus", "Santoro");
+        var person2 = new Person("Belajar", "Kode");
+        var data = [person1,person2];
+
+        function add(){
+            var objIn = new Person(prompt('Input Firstname :'),prompt('Input Lastname : '));
+            data.push(objIn);
+            show();
+        }
+        function del(){
+            var dataDel = Number(prompt("Hapus Data ke Berapa ?"))
+            if (dataDel != 0) data.splice(dataDel-1,1);
+            show();
+        }
+        function show(){
+            document.getElementById('list').innerHTML = "";
+
+            for (let i=0; i < data.length; i++){
+                data[i].showName();
+            }
+        }
+        show();
+        
+    </script>
+</body>
+</html>
