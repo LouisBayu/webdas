@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Belajar Dasar Ajax dengan Fetch</title>
+        <style>
+            body {
+                font-family: Calibri;
+                background-color: #35A9DB;
+                text-align: center;
+                
+            }
+            .container {
+                position: relative;
+                margin: 100px auto;
+                width: 40%;
+            }
+            .card{
+                background-color: white;
+                padding:20px;
+                border-radius: 5px;
+            }
+            button{
+                width:150px;
+                padding:10px;
+                font-size: 16px;
+            }
+            .hasil{
+                text-align: left;
+                border-radius:5px;
+                padding:20px;
+                margin: 10px;
+                list-style: none;
+                display: block;
+                background-color: white;
+                font-size: 18px;
+            }
+            hr{
+                border: none;
+                height: 1.2px;
+                background-color: rgb(214, 214, 214);
+            }
+            p{
+                text-align: justify;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="card">Tutorial Ajax dengan Fetch</h1>
+            <button onclick="loadContent()" id="button">Load Content</button>
+            <div id="hasil"></div>
+        </div>
+        <script>
+            function loadContent() {
+                document.getElementById("hasil").className = "hasil";
+                var url = "https://jsonplaceholder.typicode.com/posts/";
+                fetch(url).then(response => response.json())
+                    .then(function (data) {
+                        var template = data.map(post => {
+                            return `<h3>${post.title}</h3><p>${post.body}</p><hr>`;
+                        });
+                        document.getElementById("hasil").innerHTML = template.join('<br>');
+                        document.getElementById("button").innerHTML = "Done";
+                    })
+                    .catch(function (e) {
+                        alert("gagal mengambil data");
+                    });
+            }
+        </script>
+    </body>
+</html>

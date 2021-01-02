@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Belajar AJAX dengan JQuery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <style>
+            body{
+                text-align: center;
+                font-family: 'Calibri';
+            }
+            pre {
+                text-align: left;
+                color: black;
+                background-color: white;
+                padding:10px;
+                
+            }
+            #container{
+                color: white;
+                background-color: black;
+                margin-top: 0;
+                padding:40px;
+            }
+            h1{
+                background-color: gold;
+                text-align: center;
+                padding: 20px;
+                font-size: 50px; 
+                font-weight: bold;
+                margin: 0;
+            }
+            button{
+                margin-top: 20px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Belajar AJAX dengan JQuery</h1>
+        <div id="container">
+            <h2>Click Button to Load Data</h2>
+            <img id="avatar" src="" width="100" height="100">
+            <br>
+            <h3 id="name"></h3>
+            <p id="location"></p>
+        </div>
+        <button onclick="load()" id="button">Load Data</button>
+        <script>
+            var hasil = document.getElementById("container")
+            function load (){
+                var url = "http://localhost/ajax_files/kode.json";
+                $.get(url, function (data, status) {
+                    $("#avatar").attr("src", data.avatar_url);
+                    $("#name").text(data.name);
+                    $("#location").text(data.location);
+                });
+                document.getElementById("container").innerHTML += `<h2>Then Click Button to Send Data</h2>`;
+                document.getElementById("button").setAttribute("onclick","send()");
+                document.getElementById("button").innerHTML = "Send Data";
+            }
+            function send(){
+                var url = "https://jsonplaceholder.typicode.com/posts";
+                var data = {
+                    title: "Tutorial AJAX dengan JQuery",
+                    body: "Ini adalah tutorial tentang AJAX",
+                    userId: 1
+                };
+                $.post(url, data, function (data, status) {
+                    hasil.innerHTML += "<h3>Data Terkirim, Check Console";
+                    document.getElementById("button").remove();
+                    console.log(data);
+                    console.log('Data Terkirim');
+                });
+            }
+        </script>
+    </body>
+</html>

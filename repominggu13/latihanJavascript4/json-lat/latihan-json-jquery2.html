@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mari Belajar Coding</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Calibri;
+            background-color: #35A9DB;
+            text-align: center;
+            
+        }
+        .container {
+            position: relative;
+            margin: 100px auto;
+            width: 40%;
+        }
+        .card{
+            background-color: white;
+            padding:20px;
+            border-radius: 5px;
+        }
+        button{   
+            padding:10px;
+            font-size: 16px;
+        }
+        p.card{
+            text-align: left;
+            padding: 30px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container"> 
+        <h1 class="card">Belajar JSON dengan JQuery</h1>
+        <button id="btn" onclick="load()">Load Data</button>
+        <div id="result"></div>
+    </div>
+    <script type="text/javascript">
+    function load(){
+        $.getJSON("data.json", function (result) {
+            console.log(result);
+            $.each(result, function (i) {
+                var p = document.createElement("p");
+                p.innerHTML += `<b>NIM :</b> ${result[i].nim}</br>
+                                <b>Nama :</b> ${result[i].nama}</br>
+                                <b>Alamat :</b> ${result[i].alamat}</br>
+                                <b>Jurusan :</b> ${result[i].jurusan}</br>
+                                <b>Mata Kuliah :</b></br>
+                                `;
+                result[i].MK.forEach(function (x){
+                    p.innerHTML += `${x.mk_kode} - ${x.nama_mk}</br>`;
+                });
+                p.className = "card";
+                document.getElementById("result").append(p);
+            });
+        });
+        document.getElementById("btn").innerHTML = "Clear";
+        document.getElementById("btn").setAttribute("onclick","clearResult()");
+    }
+    function clearResult(){
+        document.getElementById("result").innerHTML = "";
+        document.getElementById("btn").innerHTML = "Load Data";
+        document.getElementById("btn").setAttribute("onclick","load()");
+    }
+    </script>
+</body>
+</html>
