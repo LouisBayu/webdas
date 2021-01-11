@@ -1,3 +1,10 @@
+// AOS Effect
+function giveAOS(kelas, index, effect, duration = 500, delay = 100) {
+  kelas[index].setAttribute("data-aos", effect);
+  kelas[index].setAttribute("data-aos-duration", duration);
+  kelas[index].setAttribute("data-aos-delay", delay);
+}
+AOS.init();
 
 // Navbar Button Dropdown Script
 function navBarButton() {

@@ -164,7 +164,8 @@ main{
     height: 30px;
     transition: border 0.2s ease-in-out;
     transition: box-shadow 0.2s ease-in-out;
-    padding-left: 10px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 .order textarea{
     height: 100px;

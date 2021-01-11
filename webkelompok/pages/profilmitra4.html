@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/profilmitra.css">
     <link rel="stylesheet" href="../css/layanan.css">
     <link rel="icon" href="../icon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Profil Mitra</title>
 </head>
 <body>
@@ -96,7 +98,7 @@
         <div class="other">
             <h1>Mitra Lain</h1>
             <div class="container-other">
-                <a style="margin-left: 0;" class="offline">
+                <a style="margin-left: 0;" class="offline mitra">
                     <div class="mitra-card card-choose clearfix">
                         <div class="img-choose mitra-img"></div>
                         <h2>Wulaningrum</h2>
@@ -105,7 +107,7 @@
                         <p>4.4/5</p>
                     </div>
                 </a>
-                <a style="margin-left: 0;" class="offline">
+                <a style="margin-left: 0;" class="offline mitra">
                     <div class="mitra-card card-choose clearfix">
                         <div class="img-choose mitra-img"></div>
                         <h2>Ainu</h2>
@@ -215,6 +217,25 @@
         <p style="font-size: 12px; margin-top: 10px;">Copyright &copy; 2020 Kelompok 5.</p> 
     </footer>
 
+    <script>
+        function giveAOS(kelas, index, effect, duration = 500, delay = 100) {
+            kelas[index].setAttribute("data-aos", effect);
+            kelas[index].setAttribute("data-aos-duration", duration);
+            kelas[index].setAttribute("data-aos-delay", delay);
+        }
+        // AOS EFFECT CARD
+        var card = document.getElementsByClassName("card");
+        for (i = 0; i < card.length; i++) {
+            giveAOS(card, i, "fade-up", 500, 200 * i);
+        };
+        var mitra = document.getElementsByClassName("mitra");
+        for (i = 0; i < mitra.length; i++) {
+            giveAOS(mitra, i, "zoom-in", 500, 100 * i);
+        };
+        giveAOS(document.getElementsByClassName("wrap-contact"),0,"fade-left",800,200);
+        giveAOS(document.getElementsByClassName("about-card"),0,"fade-up",800,200);
+        giveAOS(document.getElementsByClassName("about-card"),1,"fade-up",800);
+    </script>
     <script src="../script.js"></script>
 </body>
 </html>

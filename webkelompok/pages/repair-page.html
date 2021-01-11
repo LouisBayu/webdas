@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/layanan.css">
     <link rel="icon" href="../icon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Layanan Kami</title>
 </head>
 <body>
@@ -38,19 +40,19 @@
             <h1>Pilih Perangkat</h1>
             <div class="container-choose">
                 <a href="printer.html">
-                    <div class="card-choose">
+                    <div class="card-choose jenis">
                         <div class="repair"></div>
                         <h2>Printer</h2>
                     </div>
                 </a>
                 <a href="laptop.html">
-                    <div class="card-choose">
+                    <div class="card-choose jenis">
                         <div class="repair"></div>
                         <h2>Laptop</h2>
                     </div>
                 </a>
                 <a href="hp.html">
-                    <div class="card-choose">
+                    <div class="card-choose jenis">
                         <div class="repair"></div>
                         <h2>HP</h2>
                     </div>
@@ -61,7 +63,7 @@
         <div class="wrapper-mitra">
             <h1>Daftar Mitra</h1>
             <div class="container-mitra">
-                <a href="profilmitra1.html" class="online">
+                <a href="profilmitra1.html" class="online mitra">
                     <div class="mitra-card card-choose clearfix">
                         <div class="img-choose mitra-img"></div>
                         <h2>Bejo</h2>
@@ -70,7 +72,7 @@
                         <p>4.8/5</p>
                     </div>
                 </a>
-                <a class="offline">
+                <a class="offline mitra">
                     <div class="mitra-card card-choose clearfix">
                         <div class="img-choose mitra-img"></div>
                         <h2>Jono</h2>
@@ -79,7 +81,7 @@
                         <p>4.3/5</p>
                     </div>
                 </a>
-                <a href="profilmitra2.html" class="online">
+                <a href="profilmitra2.html" class="online mitra">
                     <div class="mitra-card card-choose clearfix">
                         <div class="img-choose mitra-img"></div>
                         <h2>Joni</h2>
@@ -88,7 +90,7 @@
                         <p>4.4/5</p>
                     </div>
                 </a>
-                <a class="offline">
+                <a class="offline mitra">
                     <div class="mitra-card card-choose clearfix">
                         <div class="img-choose mitra-img"></div>
                         <h2>Budi</h2>
@@ -97,7 +99,7 @@
                         <p>4.4/5</p>
                     </div>
                 </a>
-                <a class="offline">
+                <a class="offline mitra">
                     <div class="mitra-card card-choose clearfix">
                         <div class="img-choose mitra-img"></div>
                         <h2>Oji</h2>
@@ -106,7 +108,7 @@
                         <p>4.5/5</p>
                     </div>
                 </a>
-                <a class="offline">
+                <a class="offline mitra">
                     <div class="mitra-card card-choose clearfix">
                         <div class="img-choose mitra-img"></div>
                         <h2>Kurniawan</h2>
@@ -115,7 +117,7 @@
                         <p>4.7/5</p>
                     </div>
                 </a>
-                <a class="offline">
+                <a class="offline mitra">
                     <div class="mitra-card card-choose clearfix">
                         <div class="img-choose mitra-img"></div>
                         <h2>Nasir</h2>
@@ -124,7 +126,7 @@
                         <p>4.5/5</p>
                     </div>
                 </a>
-                <a href="profilmitra3.html" class="online">
+                <a href="profilmitra3.html" class="online mitra">
                     <div class="mitra-card card-choose clearfix">
                         <div class="img-choose mitra-img"></div>
                         <h2>Pratama</h2>
@@ -235,6 +237,26 @@
         <p style="font-size: 12px; margin-top: 10px;">Copyright &copy; 2020 Kelompok 5.</p> 
     </footer>
 
+    <script>
+        function giveAOS(kelas, index, effect, duration = 500, delay = 100) {
+            kelas[index].setAttribute("data-aos", effect);
+            kelas[index].setAttribute("data-aos-duration", duration);
+            kelas[index].setAttribute("data-aos-delay", delay);
+        }
+        // AOS EFFECT CARD
+        var card = document.getElementsByClassName("card");
+        for (i = 0; i < card.length; i++) {
+            giveAOS(card, i, "fade-up", 500, 200 * i);
+        }
+        var jenis = document.getElementsByClassName("jenis");
+        for (i = 0; i < jenis.length; i++) {
+            giveAOS(jenis, i, "fade-up", 500, 200 * i);
+        }
+        var mitra = document.getElementsByClassName("mitra");
+        for (i = 0; i < mitra.length; i++) {
+            giveAOS(mitra, i, "zoom-in", 500, 100 * i);
+        }
+    </script>
     <script src="../script.js"></script>
 </body>
 </html>

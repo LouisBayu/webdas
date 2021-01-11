@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Uservice Home</title>
 </head>
 <body>
@@ -46,7 +48,7 @@
                     </div>
                 </a>
                 <a href="pages/design-page.html">
-                    <div class="card">
+                    <div class="card" id="coba">
                         <div class="img-card">
                             <img src="image/design.png" alt="design">
                         </div>
@@ -114,11 +116,11 @@
                 </div>
                 <div class="guide-text">
                     <ol>
-                        <li><p>Pilih layanan yang dibutuhkan pada bagian layanan.</p></li>
-                        <li><p>Pilih sub layanan yang tersedia.</p></li>
-                        <li><p>Lihat dan pilih mitra yang tersedia.</p></li>
-                        <li><p>Mengisi form pemesanan layanan.</p></li>
-                        <li><p>Tunggu mitra menghubungi anda.</p></li>
+                        <li class="step"><p>Pilih layanan yang dibutuhkan pada bagian layanan.</p></li>
+                        <li class="step"><p>Pilih sub layanan yang tersedia.</p></li>
+                        <li class="step"><p>Lihat dan pilih mitra yang tersedia.</p></li>
+                        <li class="step"><p>Mengisi form pemesanan layanan.</p></li>
+                        <li class="step"><p>Tunggu mitra menghubungi anda.</p></li>
                     </ol>
                 </div>
             </div>
@@ -158,7 +160,7 @@
                         <a href="#">Forgot your account?</a>
                     </div>
                     <input type="submit" value="Login" class="login-button">
-                    <a href="#" class="regis-button-popup">Register</a>
+                    <a href="pages/daftar.html" class="regis-button-popup">Register</a>
                 </form>
             </div>
         </div>
@@ -197,6 +199,35 @@
         <p style="font-size: 12px; margin-top: 10px;">Copyright &copy; 2020 Kelompok 5.</p> 
     </footer>
 
+    <script>
+        function giveAOS(kelas, index, effect, duration = 500, delay = 100) {
+            kelas[index].setAttribute("data-aos", effect);
+            kelas[index].setAttribute("data-aos-duration", duration);
+            kelas[index].setAttribute("data-aos-delay", delay);
+        }
+        // AOS Effect Benefit
+        var benefit = document.getElementsByClassName("content-benefit");
+        for (i = 0; i < benefit.length; i++) {
+            if (i % 2 == 0) {
+                giveAOS(benefit, i, "fade-left", 800);
+            } else {
+                giveAOS(benefit, i, "fade-right", 800);
+            }
+        };
+        // AOS EFFECT CARD
+        var card = document.getElementsByClassName("card");
+        for (i = 0; i < card.length; i++) {
+            giveAOS(card, i, "fade-up", 500, 200 * i);
+        }
+        // AOS Step Use
+        giveAOS(document.getElementsByClassName("guide-box"), 0, "zoom-in", 1000);
+        var step = document.getElementsByClassName("step");
+        for (i = 0; i < step.length; i++) {
+            giveAOS(step, i, "fade-left", 400, 200 * i);
+        }
+        // AOS Gabung
+        giveAOS(document.getElementsByClassName("join"), 0, "zoom-in", 800, 300);
+    </script>
     <script src="script.js"></script>
 </body>
 </html> 

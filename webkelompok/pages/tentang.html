@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../icon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Tentang Kami</title>
 </head>
 <body>
@@ -36,16 +38,16 @@
         <div class="about-us">
             <h1>Siapa Kami ?</h1>
             <div class="wrap-about-us">
-                <a href="../index.html"><img src="../image/logo.png "alt="logo"></a>
-                <p>Uservice adalah tempat berkumpulnya para freelancer pada bidang-bidang yang tersedia.
+                <a href="../index.html"><img src="../image/logo.png "alt="logo" data-aos="zoom-in" data-aos-duration="1000"></a>
+                <p class="text-about">Uservice adalah tempat berkumpulnya para freelancer pada bidang-bidang yang tersedia.
                 Awal mula terbentuknya Uservice yaitu,  seperti yang kita ketahui banyak orang yang memiliki potensi yang layak untuk dikembangkan. Tidak banyak dari mereka hanya mampu mempromosikan nya melalui media sosial saja, di Uservice ini kami ingin memberikan jalan atau lapak untuk mereka yang membutuhkan tempat untuk mempromosikan dan untuk mengembangkan potensi di suatu bidang yang telah tersedia di Uservice.</p><br>
-                <p>Adanya Uservice ini, kami berharap dapat mengurangi nilai pengangguran kerja, dan dapat menampung orang-orang yang memiliki potensi besar untuk berkembang dan patut untuk diapresiai</p><br>
-                <p>Layanan yang kami sediakan disini yaitu yang pertama, Repair: disini kami siap membabntu keluhan masalah yang terdapat di laptop, handphone, dan printer anda. Yang kedua kami melayani pada bidang Design: kita menyediakan edit produk design, web design dan art. Layanan yang ketiga yaitu photography: disini kita memiliki dua sub-layanan yaitu video dan foto.</p>
+                <p class="text-about">Adanya Uservice ini, kami berharap dapat mengurangi nilai pengangguran kerja, dan dapat menampung orang-orang yang memiliki potensi besar untuk berkembang dan patut untuk diapresiai</p><br>
+                <p class="text-about">Layanan yang kami sediakan disini yaitu yang pertama, Repair: disini kami siap membabntu keluhan masalah yang terdapat di laptop, handphone, dan printer anda. Yang kedua kami melayani pada bidang Design: kita menyediakan edit produk design, web design dan art. Layanan yang ketiga yaitu photography: disini kita memiliki dua sub-layanan yaitu video dan foto.</p>
             </div>
         </div>
         <div class="contact-us">
             <h1>Stay in Touch</h1>
-            <div class="wrap-contact-us">
+            <div class="wrap-contact-us" data-aos="fade-up" data-aos-duration="800">
                 <h2>Contact Us</h2>
                 <form class="form-contact">
                     <p>Nama Lengkap</p>
@@ -54,7 +56,7 @@
                     <input type="email" name="email-costumer" placeholder="Email">
                     <p>Pesan</p>
                     <textarea name="pesan" placeholder="Tuliskan Pesan"></textarea>
-                    <input type="submit" value="Kirim Pesan" class="login-button contact-send">
+                    <input type="submit" value="Kirim Pesan" class="login-button contact-send" data-aos="zoom-in">
                 </form>
             </div>
         </div>
@@ -264,7 +266,32 @@
         <hr>
         <p style="font-size: 12px; margin-top: 10px;">Copyright &copy; 2020 Kelompok 5.</p> 
     </footer>
+    <script>
+        function giveAOS(kelas, index, effect, duration = 500, delay = 100) {
+            kelas[index].setAttribute("data-aos", effect);
+            kelas[index].setAttribute("data-aos-duration", duration);
+            kelas[index].setAttribute("data-aos-delay", delay);
+        }
+        // AOS EFFECT CARD
+        var card = document.getElementsByClassName("card");
+        for (i = 0; i < card.length; i++) {
+            giveAOS(card, i, "fade-up", 500, 200 * i);
+        }
+        var text = document.getElementsByClassName("text-about");
+        for (i = 0; i < text.length; i++) {
+            giveAOS(text, i, "fade-right", 500, 100 * i);
+        }
+        var kelompok = document.getElementsByClassName("card-kelompok");
+        for (i = 0; i < kelompok.length; i++) {
+            if (i%2 == 0) {
+                giveAOS(kelompok, i, "fade-right", 700, 200 * i);
+            } else{
+                giveAOS(kelompok, i, "fade-left", 700, 200 * i);
+                
+            }
+        }
 
+    </script>
     <script src="../script.js"></script>
 </body>
 </html>
